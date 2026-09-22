@@ -1,5 +1,8 @@
-public class Main {
-  public static void main(String[]args){
+import java.util.Scanner; //(Syntax for calling the 
+//Input function on the variable in the module Scanner)
+
+public class Main{
+  public static void main(String[] args){
     System.out.println("Hello, World");
     int age = 20;
     double price = 30.20;
@@ -15,42 +18,9 @@ public class Main {
     System.out.println("Grade: "+ grade);
     System.out.println("Is Student?: "+ isStudent);
 
-  }
-}
-
-// Data
-//int - whole number
-//double - double precisions of decimal number
-//float single precisions of decimal number 'f'
-//char a single character of text
-//Boolean True or false
-//String not primative text
 
 
-//declaring variable of different data TypeNotPresentException
-//int   age      =  20    ;
-//types variable EQ value close tag 
 
-//double price = 30.20:
-//float weight = 51.6f;
-//char grade = 'A';
-//boolean isStudent = true;
-//String name = "Alice";
-
-// Output 
-//System.out.println("Name: +name"); Alice
-//System.out.println("Age: +age"); 20
-//System.out.println("Price: +price"); 30.20
-//System.out.println("Weight: +weight"); 51.60
-//System.out.println("Grade: +grade"); A
-//System.out.println("Is Student?: +isStudent"); True
-
-// Getting input using Scanner
-import java.util.Scanner; (Syntax for calling the 
-Input function on the variable in the module Scanner)
-
-public class Main{
-  public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
     //Reading One word (stops at whitespace)
     System.out.print("\nEnter your city: ");
@@ -58,62 +28,48 @@ public class Main{
     System.out.println("You live in: " +userCity);
 
     // reading the fullline (including spaces)
-    scanner.nextLine // clears leftover mewline from previous next()
-    System.out.print("Enter a sentence about your self: ")
+    scanner.nextLine(); // clears leftover mewline from previous next()
+    System.out.print("Enter a sentence about your self: ");
     String fullSentence = scanner.nextLine(); // reads the entire line or paragraph
     System.out.println("You said: "+fullSentence);
+    
+
+    int a =10, b = 3;
+    System.out.println("\na + b = "+(a+b));
+    System.out.println("a - b = "+(a-b));
+    System.out.println("a * b = "+(a*b));
+    System.out.println("a / b = "+(a/b));
+    System.out.println("a % b = "+(a%b));
+
+    boolean p = true, q = false;
+    System.out.println("\np && q: "+(p&&q));
+    System.out.println("p || q: "+(p||q));
+    System.out.println("!p: "+(!p));
+    System.out.println("!q: "+(!q));
+
+    int score = 50; 
+    score += 10;
+    System.out.println("\nscore after += 10: "+score);
+    score *= 2;
+    System.out.println("score after *= 2: "+score);
+
+    int counter = 5;
+    System.out.println("\ncounter++ (post): "+counter++);
+    System.out.println("counter now: "+counter++);
+    System.out.println("++counter (pre): "+ +counter); 
+
+
+    System.out.println("\nEnter your exam score: ");
+    int Examscore = scanner.nextInt();
+    if (Examscore >= 90){
+      System.out.println("Grade: A");
+    } else if (Examscore>=80){
+      System.out.println("Grade: B");
+    } else if (Examscore>=70){
+      System.out.println("Grade: C");
+    } else{
+      System.out.println("Grade: F");
+    }
     scanner.close();
   }
 }
-
-//Operators and Expression
-//Arithmetic Operators
-int a =10, b = 3;
-System.out.println("a + b = "+(a+b));
-System.out.println("a - b = "+(a-b));
-System.out.println("a * b = "+(a*b));
-System.out.println("a / b = "+(a/b));
-System.out.println("a % b = "+(a%b));
-
-double x = 10, y = 3;
-System.out.println("x / y = "+(x/y));
-
-//Relational Operators (return bool; 1 or 0)
-System.out.println("\na == b = "+(a==b));
-System.out.println("a != b = "+(a!=b));
-System.out.println("a > b = "+(a>b));
-System.out.println("a < b = "+(a<b));
-System.out.println("a >= b = "+(a>=b));
-System.out.println("a <= b = "+(a<=b));
-
-//Logical Operators
-boolean p = true, q = false;
-System.out.println("\np && q: "+(p&&q));
-System.out.println("p || q: "+(p||q));
-System.out.println("!p: "+(!p));
-System.out.println("!q: "+(!q));
-
-
-// Asignment Operators
-int score = 50; 
-score += 10;
-System.out.println("\nscore after += 10"+score)
-score *= 2;
-System.out.println("score after *= 2"+score)
-
-// Increment / Decrement Operators
-int counter = 5;
-System.out.println("\ncounter++ (post): "+counter++);
-System.out.println("counter now: "+counter++);
-System.out.println("++counter (pre): "++counter);
-
-
-
-
-
-
-
-
-
-
-
